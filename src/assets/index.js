@@ -30,7 +30,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.jpg";
 import tripguide from "./tripguide.jpg";
 
-import Tilt from 'react-parallax-tilt';
+// import Tilt from 'react-parallax-tilt';
 
 export {
   logo,
