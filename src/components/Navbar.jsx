@@ -24,6 +24,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (nav) => {
+    if (nav.id === 'resume') {
+      window.open(nav.link, '_blank');
+    } else {
+      setActive(nav.title);
+      const element = document.getElementById(nav.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <nav
       className={`${styles.paddingX
@@ -52,9 +64,15 @@ const Navbar = () => {
               key={nav.id}
               className={`${active === nav.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavClick(nav)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.id === 'resume' ? (
+                <a href={nav.link} target="_blank" rel="noopener noreferrer">
+                  {nav.title}
+                </a>
+              ) : (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -79,11 +97,10 @@ const Navbar = () => {
                     }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    handleNavClick(nav);
                   }}
                 >
                   {nav.id === 'resume' ? (
-                    // Resume link to open in a new tab
                     <a
                       href={nav.link}
                       target="_blank"
@@ -92,10 +109,7 @@ const Navbar = () => {
                       {nav.title}
                     </a>
                   ) : (
-                    // Normal navigation links
-                    <a href={`#${nav.id}`}>
-                      {nav.title}
-                    </a>
+                    <a href={`#${nav.id}`}>{nav.title}</a>
                   )}
                 </li>
               ))}

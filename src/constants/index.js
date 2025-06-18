@@ -43,7 +43,7 @@ export const navLinks = [
   {
     id: 'resume',
     title: 'Resume',
-    link: '/Resume.pdf', // Ensure this path points to the correct file in the public folder
+    link: '/Resume.pdf',
   },
 ];
 
@@ -102,7 +102,7 @@ const experiences = [
       "🌐 Also crafted responsive and dynamic web applications, along with admin panels for managing news posts, reviewing advertisements, and overseeing user interactions — putting full control in the hands of admins!",
       "🧭 Implemented complex navigation with React Navigation, ensured state management with React Hooks (like useState, useEffect, useContext), and handled API calls effortlessly using fetch and axios.",
       "🛠️ Focused on writing reusable, maintainable UI components with performance optimization and solid error handling.",
-      "💡 Whether it’s posting breaking news, approving content, or managing ads — I’ve built systems that are smooth, scalable, and a joy to use!"
+      "💡 Whether it's posting breaking news, approving content, or managing ads — I've built systems that are smooth, scalable, and a joy to use!"
     ],
   },
   {
@@ -181,7 +181,49 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: figma,
+    image: docker,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "BoldEats",
+    description:
+      "Understanding how to design a Video Library like YouTube application that allows admin to upload, modify and delete videos. Customer can watch videos after register and login. ",
+    tags: [
+      {
+        name: "React JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Matterial UI",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "BoldServe",
+    description:
+      "Understanding how to design a Video Library like YouTube application that allows admin to upload, modify and delete videos. Customer can watch videos after register and login. ",
+    tags: [
+      {
+        name: "React JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Matterial UI",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
     source_code_link: "https://github.com/",
   },
   {

@@ -8,7 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
+import docker from "./figma.png";
 import figma from "./Tms carddd.jpg";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
